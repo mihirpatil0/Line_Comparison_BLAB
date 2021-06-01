@@ -1,6 +1,5 @@
 package linecomparison;
 import java.util.*;
-import java.lang.*;
 
 public class LineComparison 
 {
@@ -30,13 +29,18 @@ public class LineComparison
 		System.out.println("The length of a line is:" + secondLineLength);
 		Float obj1 = firstLineLength;
 		Float obj2 = secondLineLength;
-		if (obj1.equals(obj2)) {
-			System.out.println("Both the line are equal");
+		int val = Float.compare(obj1, obj2);
+	    if (val == 0) 
+		{
+			System.out.println("Both the line are equal.");
+		}
+		else if (val > 0)
+		{
+			System.out.println("The first line is greater than the second line.");
 		}
 		else
 		{
-			System.out.println("they are not equal");
+			System.out.println("The second line is greater than first line.");
 		}
-		
 	}
 }
